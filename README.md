@@ -4,7 +4,7 @@ SmartConnect est une application web simple pour la surveillance et la gestion d
 
 ## Aperçu
 
-![Aperçu de SmartConnect](images/screenshot.svg)
+![Aperçu de SmartConnect](https://api.microlink.io/?url=https://fasterious.github.io/smartconnect/index.html&screenshot=true&meta=false&embed=screenshot.url&waitFor=5000&fullPage=false&overlay.browser=dark&viewport.width=1280&viewport.height=800&cache=true)
 
 ## Démo en ligne
 
