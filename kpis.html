@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartConnect - KPIs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">SmartConnect</div>
+            <ul class="nav-links">
+                <li><a href="index.html"><span class="icon">🏠</span> Dashboards</a></li>
+                <li class="active"><a href="kpis.html"><span class="icon">📊</span> KPIs</a></li>
+                <li><a href="settings.html"><span class="icon">⚙️</span> Settings</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <header>
+                <h1>Key Performance Indicators</h1>
+                <div class="date-filter">
+                    <label for="date-range">Period:</label>
+                    <select id="date-range">
+                        <option value="day">Last 24 hours</option>
+                        <option value="week" selected>Last 7 days</option>
+                        <option value="month">Last 30 days</option>
+                        <option value="year">Last 365 days</option>
+                    </select>
+                </div>
+            </header>
+            
+            <div class="kpi-summary">
+                <div class="kpi-card">
+                    <div class="kpi-title">Total Gateways</div>
+                    <div class="kpi-value" id="total-gateways">0</div>
+                    <div class="kpi-trend up">+5% from previous period</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Active Gateways</div>
+                    <div class="kpi-value" id="active-gateways">0</div>
+                    <div class="kpi-trend up">+2% from previous period</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Data Volume</div>
+                    <div class="kpi-value" id="data-volume">0 GB</div>
+                    <div class="kpi-trend up">+12% from previous period</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Uptime</div>
+                    <div class="kpi-value" id="uptime">0%</div>
+                    <div class="kpi-trend down">-1% from previous period</div>
+                </div>
+            </div>
+            
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>Gateway Activity</h3>
+                    <div class="chart" id="activity-chart">
+                        <!-- Chart will be rendered here -->
+                        <div class="chart-placeholder">
+                            <div class="chart-bar" style="height: 30%;"></div>
+                            <div class="chart-bar" style="height: 50%;"></div>
+                            <div class="chart-bar" style="height: 70%;"></div>
+                            <div class="chart-bar" style="height: 40%;"></div>
+                            <div class="chart-bar" style="height: 60%;"></div>
+                            <div class="chart-bar" style="height: 80%;"></div>
+                            <div class="chart-bar" style="height: 45%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Data Transfer</h3>
+                    <div class="chart" id="transfer-chart">
+                        <!-- Chart will be rendered here -->
+                        <div class="chart-placeholder">
+                            <div class="chart-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <h3>Top Gateways by Usage</h3>
+                <table class="kpi-table">
+                    <thead>
+                        <tr>
+                            <th>Gateway</th>
+                            <th>Location</th>
+                            <th>Data Volume</th>
+                            <th>Uptime</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="top-gateways-table">
+                        <!-- Table data will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/data.js"></script>
+    <script src="js/kpis.js"></script>
+</body>
+</html> 

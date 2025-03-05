@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartConnect - Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">SmartConnect</div>
+            <ul class="nav-links">
+                <li><a href="index.html"><span class="icon">🏠</span> Dashboards</a></li>
+                <li><a href="kpis.html"><span class="icon">📊</span> KPIs</a></li>
+                <li class="active"><a href="settings.html"><span class="icon">⚙️</span> Settings</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content">
+            <header>
+                <h1>Settings</h1>
+            </header>
+            
+            <div class="settings-container">
+                <div class="settings-sidebar">
+                    <ul class="settings-nav">
+                        <li class="active" data-tab="general">General</li>
+                        <li data-tab="notifications">Notifications</li>
+                        <li data-tab="security">Security</li>
+                        <li data-tab="data">Data Management</li>
+                        <li data-tab="users">User Management</li>
+                    </ul>
+                </div>
+                
+                <div class="settings-content">
+                    <!-- General Settings -->
+                    <div class="settings-tab active" id="general-tab">
+                        <h2>General Settings</h2>
+                        
+                        <form id="general-settings-form">
+                            <div class="form-group">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" value="SmartConnect Inc.">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="language">Language</label>
+                                <select id="language">
+                                    <option value="en" selected>English</option>
+                                    <option value="fr">Français</option>
+                                    <option value="es">Español</option>
+                                    <option value="de">Deutsch</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timezone">Timezone</label>
+                                <select id="timezone">
+                                    <option value="UTC" selected>UTC</option>
+                                    <option value="EST">Eastern Standard Time (EST)</option>
+                                    <option value="CST">Central Standard Time (CST)</option>
+                                    <option value="MST">Mountain Standard Time (MST)</option>
+                                    <option value="PST">Pacific Standard Time (PST)</option>
+                                    <option value="CET">Central European Time (CET)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="date-format">Date Format</label>
+                                <select id="date-format">
+                                    <option value="MM/DD/YYYY" selected>MM/DD/YYYY</option>
+                                    <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                                    <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="dark-mode" checked>
+                                    Enable Dark Mode
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn">Save Changes</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Notifications Settings -->
+                    <div class="settings-tab" id="notifications-tab">
+                        <h2>Notification Settings</h2>
+                        
+                        <form id="notification-settings-form">
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="email-notifications" checked>
+                                    Enable Email Notifications
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="notification-email">Notification Email</label>
+                                <input type="email" id="notification-email" value="admin@example.com">
+                            </div>
+                            
+                            <h3>Alert Preferences</h3>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="offline-alerts" checked>
+                                    Gateway Offline Alerts
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="sensor-alerts" checked>
+                                    Sensor Threshold Alerts
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="security-alerts" checked>
+                                    Security Alerts
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn">Save Changes</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Security Settings -->
+                    <div class="settings-tab" id="security-tab">
+                        <h2>Security Settings</h2>
+                        
+                        <form id="security-settings-form">
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm New Password</label>
+                                <input type="password" id="confirm-password">
+                            </div>
+                            
+                            <h3>Two-Factor Authentication</h3>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="enable-2fa">
+                                    Enable Two-Factor Authentication
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn">Save Changes</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Data Management Settings -->
+                    <div class="settings-tab" id="data-tab">
+                        <h2>Data Management</h2>
+                        
+                        <form id="data-settings-form">
+                            <div class="form-group">
+                                <label for="data-retention">Data Retention Period</label>
+                                <select id="data-retention">
+                                    <option value="30">30 days</option>
+                                    <option value="60">60 days</option>
+                                    <option value="90" selected>90 days</option>
+                                    <option value="180">180 days</option>
+                                    <option value="365">1 year</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="backup-frequency">Automatic Backup Frequency</label>
+                                <select id="backup-frequency">
+                                    <option value="daily">Daily</option>
+                                    <option value="weekly" selected>Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="data-compression" checked>
+                                    Enable Data Compression
+                                </label>
+                            </div>
+                            
+                            <div class="danger-zone">
+                                <h3>Danger Zone</h3>
+                                <button type="button" class="btn btn-danger" id="clear-data">Clear All Data</button>
+                                <button type="button" class="btn btn-danger" id="reset-app">Reset Application</button>
+                            </div>
+                            
+                            <button type="submit" class="btn">Save Changes</button>
+                        </form>
+                    </div>
+                    
+                    <!-- User Management Settings -->
+                    <div class="settings-tab" id="users-tab">
+                        <h2>User Management</h2>
+                        
+                        <div class="user-list-container">
+                            <div class="user-list-header">
+                                <h3>Users</h3>
+                                <button class="btn" id="add-user">+ Add User</button>
+                            </div>
+                            
+                            <table class="user-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Last Login</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="user-table-body">
+                                    <!-- User entries will be added dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Modal for adding a new user -->
+    <div class="modal" id="user-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add New User</h2>
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="user-name">Full Name</label>
+                    <input type="text" id="user-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-email">Email</label>
+                    <input type="email" id="user-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-role">Role</label>
+                    <select id="user-role">
+                        <option value="admin">Administrator</option>
+                        <option value="manager">Manager</option>
+                        <option value="user" selected>User</option>
+                        <option value="viewer">Viewer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Add User</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/data.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html> 
