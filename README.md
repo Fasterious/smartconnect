@@ -2,6 +2,14 @@
 
 SmartConnect est une application web simple pour la surveillance et la gestion de gateways IoT. Cette application permet de visualiser les données collectées par des capteurs connectés à des gateways, d'analyser les performances via des KPIs et de gérer les paramètres de l'application.
 
+## Aperçu
+
+![Aperçu de SmartConnect](https://api.microlink.io/?url=https://fasterious.github.io/smartconnect/&screenshot=true&meta=false&embed=screenshot.url)
+
+## Démo en ligne
+
+Une démo en ligne est disponible [ici](https://fasterious.github.io/smartconnect/).
+
 ## Fonctionnalités
 
 - **Dashboard des Gateways** : Visualisez l'état de vos gateways et les données des capteurs en temps réel.
